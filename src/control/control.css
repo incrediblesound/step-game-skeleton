@@ -1,0 +1,14 @@
+.action button {
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    margin: 10px 20px 10px 20px;
+    min-width: 200px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.inactive button {
+    background-color: #DFDFDF;
+    cursor:default;
+}

@@ -1,0 +1,54 @@
+.main {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 49px;
+    padding-left: 15px;
+    font-family: monospace;
+    border-bottom: 1px solid black;
+}
+
+.message-panel {
+    margin: 15px;
+    padding: 15px;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 350px;
+    right: 350px;
+}
+
+.control-panel {
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    width: 350px;
+}
+
+.player-stats {
+    padding: 10px;
+    border-right: 2px solid black;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: 350px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
