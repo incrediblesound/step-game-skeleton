@@ -1,12 +1,15 @@
 import gameData from './gameData';
-import showMessages from './control/messageService';
 import calculateMilestones from './control/milestoneService';
 import advancePlayerStats from './control/advanceStats';
+import { battleAction } from './control/battleAction';
 
 class Store {
     constructor(){
         this.callbacks = [];
+        this.nextActions = [];
+        this.messages = [];
         this.data = gameData;
+        this.doBattleAction = battleAction;
     }
     onUpdate(cb){
         this.callbacks.push(cb)
@@ -16,26 +19,21 @@ class Store {
             cb();
         })
     }
-    doAction(action){
-        this.data.step += 1;
-        action.fn(this);
-        calculateMilestones(this);
-        advancePlayerStats(this);
-        showMessages(this);
-        this.update();
+    doNext(){
+        const action = this.nextActions.shift();
+        action(this);
     }
-    doBattleAction(action){
-        debugger;
-        this.data.enemyForce[0].life -= action.attack;
-        this.data.enemyForce = this.data.enemyForce.filter((unit) => {
-            return unit.life > 0;
-        });
-        if(this.data.enemyForce.length < 1){
-            this.data.gameState = null;
-            this.data.enemyForce = null;
-            this.data.step += 1;
+    doAction(action){
+        this.data.messages = [];
+        this.data.step += 1;
+        action.fn(this.data);
+        advancePlayerStats(this);
+        if(this.nextActions.length){
+            this.doNext();
+        } else {
+            calculateMilestones(this);
+            this.update();
         }
-        this.update();
     }
 }
 

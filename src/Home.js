@@ -11,7 +11,7 @@ export default React.createClass({
         const gameState = this.props.store.data.gameState;
         return (
             <div className="main">
-                <Title/>
+                <Title mission={this.props.store.data.mission}/>
                 <PlayerStats
                     data={this.props.store.data}
                 />

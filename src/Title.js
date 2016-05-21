@@ -5,6 +5,7 @@ export default React.createClass({
         return (
             <div className="title">
                 <h2>Star Defense</h2>
+                <p>Mission: {this.props.mission}</p>
             </div>
         )
     }

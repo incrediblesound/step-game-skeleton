@@ -21,7 +21,7 @@ export default React.createClass({
                 <Stat label="Long Range Missiles">
                     {data.forces.longRange}
                 </Stat>
-                <Stat label="Lancer Ships">
+                <Stat label="Lancer Drones">
                     {data.forces.lancers}
                 </Stat>
                 <h2>Facilities</h2>

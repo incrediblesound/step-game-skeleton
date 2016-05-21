@@ -1,4 +1,5 @@
 import React from 'react';
+import './messages.css';
 
 export default React.createClass({
     _getEnemyForces(){
@@ -15,7 +16,8 @@ export default React.createClass({
     render() {
         const data = this.props.data;
         return (
-            <div>
+            <div className="battle-messages">
+                <h2>Enemy Forces</h2>
                 {this._getEnemyForces()}
             </div>
         )

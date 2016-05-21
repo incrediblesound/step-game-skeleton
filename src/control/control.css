@@ -1,14 +1,50 @@
+.action {
+    border-bottom: 1px solid grey;
+}
+
 .action button {
     padding: 5px 10px 5px 10px;
     background-color: white;
-    margin: 10px 20px 10px 20px;
-    min-width: 200px;
-    border-radius: 5px;
+    margin: 5px 10px 5px 10px;
+    width: 80%;
     font-size: 14px;
     cursor: pointer;
+}
+
+.action-info, .action-button {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.action-info p {
+    margin: 0px 5px 0px 5px;
+    font-size: 14px;
+}
+
+.action-label {
+    text-transform: uppercase;;
+}
+
+.action-cost {
+    color: #00cc00;
+}
+.not-enough {
+    color: red;
 }
 
 .inactive button {
     background-color: #DFDFDF;
     cursor:default;
+}
+
+.control-panel {
+    margin: 20px;
+    border-radius: 8px;
+    position: absolute;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    width: 350px;
 }

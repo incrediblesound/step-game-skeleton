@@ -1,0 +1,41 @@
+.battle-messages h2 {
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.battle-messages h3 {
+    font-family: sans-serif;
+}
+
+.message-panel p {
+
+}
+
+.message-panel {
+    margin: 5px 15px 10px 15px;
+    padding: 0px 15px 0px 15px;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 350px;
+    right: 350px;
+}
+
+.message-text {
+    font-size: 14px;
+    font-family: sans-serif;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 0;
+  }
+
+  to {
+    margin-top: 20px;
+  }
+}

@@ -3,25 +3,42 @@ const actions = {
     basic: [
         {
             label: 'Dig Mine',
-            fn: (store) => {
-                store.data.facilities.mines += 1;
+            cost: '2 Energy',
+            fn: (data) => {
+                data.facilities.mines += 1;
+                data.resources.energy -= 2;
+                data.messages.unshift({
+                    color: 'blue',
+                    text: 'A new mine has been constructed'
+                })
             },
-            isActive: (store) => true
+            isActive: (data) => (data.resources.energy > 1)
         },
         {
             label: 'Build Reactor',
-            fn: (store) => {
-                store.data.facilities.reactors += 1;
+            cost: '5 Ore',
+            fn: (data) => {
+                data.facilities.reactors += 1;
+                data.resources.ore -= 3;
+                data.messages.unshift({
+                    color: 'blue',
+                    text: 'A new reactor has been constructed'
+                })
             },
-            isActive: (store) => true
+            isActive: (data) => (data.resources.ore > 4)
         },
         {
             label: 'Build Lancer',
-            fn: (store) => {
-                store.data.resources.ore -= 5;
-                store.data.forces.lancers += 1;
+            cost: '3 Ore',
+            fn: (data) => {
+                data.resources.ore -= 3;
+                data.forces.lancers += 1;
+                data.messages.unshift({
+                    color: 'blue',
+                    text: 'A new lancer drone has been constructed'
+                })
             },
-            isActive: (store) => (store.data.resources.ore > 4)
+            isActive: (data) => (data.resources.ore > 2)
         }
     ]
 }

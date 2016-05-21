@@ -1,9 +1,18 @@
-import { raider } from '../units';
+import allSteps from '../steps';
 
 export default function calculateMilestones(store){
-    const data = store.data;
-    if(data.step == 5){
-        data.gameState = 'battle';
-        data.enemyForce = [ raider, raider, raider ]
+    const steps = getSteps(allSteps, store);
+    steps.forEach((step) => {
+        step.action(store);
+    })
+}
+
+function getSteps(steps, store){
+    var result = [];
+    for(var i = 0; i < steps.length; i++){
+        if(steps[i].test(store)){
+            result.push(steps[i]);
+        }
     }
+    return result;
 }

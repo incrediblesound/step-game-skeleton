@@ -1,5 +1,6 @@
 export default {
     step: 0,
+    mission: 'Build up your resources to improve your facilities',
     player: {
         technology: 1,
         military: 1,
@@ -18,7 +19,13 @@ export default {
         reactors: 1
     },
     currentAction: [],
-    messages: [],
+    messages: [{
+        color: 'black',
+        text: `Your small city lacks infrastructure.
+        You only have a few drones to defend yourself from the Troxians.
+        You must develop your resources and infrastructure in order to be capable
+        of defense and exploration.`
+    }],
     actions: ['basic'],
     gameState: null,
     enemyForce: null

@@ -1,3 +1,8 @@
 .stat {
     margin: 3px;
 }
+.stat input {
+    width: 25px;
+    right: 80px;
+    position: absolute;
+}

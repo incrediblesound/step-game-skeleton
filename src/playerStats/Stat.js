@@ -5,7 +5,7 @@ export default React.createClass({
         return (
             <div className="stat">
                 <span><strong>{this.props.label}: </strong></span>
-                - {this.props.children} -
+                <input value={this.props.children} disabled={true}/>
             </div>
         )
     }

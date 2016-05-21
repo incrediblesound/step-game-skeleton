@@ -17,11 +17,10 @@ export default React.createClass({
         return availableActions.map((action) => {
             return (
                 <Action
-                    isActive={action.isActive(this.props.store)}
+                    isActive={action.isActive(this.props.store.data)}
                     onClick={this._doAction(action)}
-                >
-                    {action.label}
-                </Action>
+                    action={action}
+                />
             )
         })
     },
