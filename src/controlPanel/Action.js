@@ -11,7 +11,11 @@ export default React.createClass({
                     <p className={costClass}>{this.props.action.cost}</p>
                 </div>
                 <div className={buttonClass}>
-                    <button onClick={this.props.onClick}>Do Action</button>
+                    {
+                        this.props.isActive ?
+                            <button onClick={this.props.onClick}>Do Action</button>
+                        : false
+                    }
                 </div>
             </div>
         )
