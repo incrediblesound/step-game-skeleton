@@ -20,12 +20,13 @@ class Store {
         this.data.messages = [];
         this.data.step += 1;
 
+        // execute the action function
         action.fn(this.data);
-
+        // advance the players stats accordingly
         advancePlayerStats(this.data);
-
+        // check if there are any milestone events
         calculateMilestones(this.data);
-
+        // update the game UI to reflect new game state
         this.update();
     }
 }
