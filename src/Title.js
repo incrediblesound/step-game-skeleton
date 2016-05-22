@@ -4,8 +4,8 @@ export default React.createClass({
     render() {
         return (
             <div className="title">
-                <h2>Star Defense</h2>
-                <p>Mission: {this.props.mission}</p>
+                <h2>Game</h2>
+                <p> | Mission: {this.props.mission}</p>
             </div>
         )
     }

@@ -1,20 +1,17 @@
 import React from 'react';
-import BattleView from './BattleView';
+import './messages.css';
 
 export default React.createClass({
     showMessages(){
         return this.props.data.messages.map((message, idx) => {
-            return <p className="message-text">*** {message.text} ***</p>
+            return <p className="message-text">{message.text}</p>
         })
     },
     render() {
         const data = this.props.data;
         return (
             <div className="message-panel">
-                { data.gameState === 'battle' ?
-                    <BattleView data={this.props.data}/>
-                    : this.showMessages()
-                }
+                {this.showMessages()}
             </div>
         )
     }

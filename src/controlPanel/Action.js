@@ -11,7 +11,7 @@ export default React.createClass({
                     <p className={costClass}>{this.props.action.cost}</p>
                 </div>
                 <div className={buttonClass}>
-                    <button onClick={this.props.onClick}>Order Action</button>
+                    <button onClick={this.props.onClick}>Do Action</button>
                 </div>
             </div>
         )

@@ -22,8 +22,7 @@
 }
 .title p {
     display: inline-block;
-    position: absolute;
-    left: 240px;
+    margin-left: 20px;
 }
 
 .player-stats {

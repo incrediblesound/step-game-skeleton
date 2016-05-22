@@ -9,7 +9,7 @@ import Home from './Home'
 const RootRoute = {
     path: '/',
     // childRoutes: [
-    //     Help
+    //     About
     // ],
     indexRoute: { component: Home }
 }

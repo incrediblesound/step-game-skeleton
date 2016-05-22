@@ -1,18 +1,16 @@
-import allSteps from '../steps';
+import allEvents from '../gameData/events';
 
-export default function calculateMilestones(store){
-    const steps = getSteps(allSteps, store);
-    steps.forEach((step) => {
-        step.action(store);
+// events are milestones that modify the game state in arbitrary ways
+// every step of the game this function checks to see which milestones should
+// occur this step and
+
+export default function calculateMilestones(gameData){
+    const events = getEvents(allEvents, gameData);
+    events.forEach((event) => {
+        event.action(gameData);
     })
 }
 
-function getSteps(steps, store){
-    var result = [];
-    for(var i = 0; i < steps.length; i++){
-        if(steps[i].test(store)){
-            result.push(steps[i]);
-        }
-    }
-    return result;
+function getEvents(events, gameData){
+    return events.filter(step => step.test(gameData));
 }

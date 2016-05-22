@@ -1,5 +1,5 @@
 import React from 'react';
-import actions from './actions';
+import actions from '../data/gameData/actions';
 import Action from './Action';
 import './control.css';
 
@@ -10,10 +10,11 @@ export default React.createClass({
         }
     },
     _getActions(){
-        const availableActions = this.props.store.data.actions.reduce((prev, curr) => {
-            const newPrev = prev.concat(actions[curr]);
-            return newPrev;
-        }, []);
+        const data = this.props.store.data;
+        // each possible action checks the game state to see if it is available
+        // to the player
+        let availableActions = actions.filter((action) => action.test(data));
+
         return availableActions.map((action) => {
             return (
                 <Action
