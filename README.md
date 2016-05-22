@@ -1,5 +1,5 @@
 # Step-based Game Skeleton
-This is a skeleton for a step based text game in the browser. It has the following basic features: 
+This is a skeleton for a step based text game in the browser. I am a big fan of step-based text games like [A Dark Room](http://adarkroom.doublespeakgames.com/) and I wanted a simple framework that I could copy whenever I wanted to start work on one. This game skeleton has the following basic features: 
 - A player stats panel, a message panel, and an actions panel. 
 - The player chooses an action which advances the step and updates the game state. 
 - Player stats change over time based on actions and cause milestones to occur and more actions to be unlocked.
