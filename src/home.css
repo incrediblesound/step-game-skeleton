@@ -16,6 +16,16 @@
     padding-left: 15px;
     border-bottom: 1px solid black;
 }
+.title-right {
+    right: 15px;
+    width: 100px;
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+}
+.title-right span {
+    cursor: pointer;
+}
 
 .title h2 {
     display: inline-block;

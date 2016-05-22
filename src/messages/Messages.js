@@ -4,7 +4,11 @@ import './messages.css';
 export default React.createClass({
     showMessages(){
         return this.props.data.messages.map((message, idx) => {
-            return <p className="message-text">{message.text}</p>
+            return (
+                <p className="message-text" style={{color: message.color}}>
+                    {message.text}
+                </p>
+            );
         })
     },
     render() {

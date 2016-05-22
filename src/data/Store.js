@@ -29,6 +29,14 @@ class Store {
         // update the game UI to reflect new game state
         this.update();
     }
+    resetGame(gameState){
+        this.data = gameState.data;
+        this.data.messages.push({
+            color: 'green',
+            text: 'Game successfully loaded'
+        })
+        this.update();
+    }
 }
 
 export default new Store();
