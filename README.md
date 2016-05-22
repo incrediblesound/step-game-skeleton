@@ -1,9 +1,15 @@
 # Step-based Game Skeleton
-This is a skeleton for a step based browser game. There is a player stats panel, a message panel, and an actions panel. On each step the player chooses an action which advances the step and changes their stats. The players stats will evolve over time based on their actions which will cause milestones to occur and more actions to be unlocked.
+This is a skeleton for a step based browser game. It has the following basic features: 
+- A player stats panel, a message panel, and an actions panel. 
+- The player chooses an action which advances the step and updates the game state. 
+- Player stats change over time based on actions and cause milestones to occur and more actions to be unlocked.
+- You can develop any kind of action, event, or step based changes you want.
+- There is a bare-bones save/load functionality that uses local storage
+- Simple architecture and hot-reloading means you can easily extend the game skeleton with your own features
 
 You might wonder why I wrote my own store instead of using Redux. I love redux but I also love writing data flow code and this project is for my own enjoyment so I built that part from scratch. The store instance is passed down through the app. It contains the game state and will force update on the top-level react component when its update method is called. You can create arbitrary methods on the store to modify game state but it will not cause a re-render unless the update method is also called.
 
-The repo is configured to use react hot-loading making development lightning fast. There are many oportunities for further development so feel free to open issues to propose changes. If I approve of a change you can make a full request. Currently the UI is a little bare-bones. While every game would have its own theme and visual feel, it would be nice to provide a little bit more out of the box than just a few simple panels.
+There are many oportunities for further development so feel free to open issues to propose changes. If I approve of a change you can make a full request. Currently the UI is very bare-bones. While every game should have its own theme and visual feel, it would be nice to provide a little bit more out of the box than just a few simple panels.
 
 ##Development
 
