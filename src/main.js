@@ -3,7 +3,7 @@ import store from './data/store'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, hashHistory } from 'react-router'
 import Provider from './data/Provider'
-import Home from './Home'
+import Home from './home/Home'
 
 
 const RootRoute = {

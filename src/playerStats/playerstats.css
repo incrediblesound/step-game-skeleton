@@ -1,3 +1,13 @@
+.player-stats {
+    padding: 10px;
+    border-right: 1px solid black;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: 350px;
+}
+
 .stat {
     margin: 3px;
 }

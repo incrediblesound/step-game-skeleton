@@ -6,7 +6,7 @@ class Store {
     constructor(){
         this.callbacks = [];
         this.messages = [];
-        this.data = gameData;
+        this.data = gameData();
     }
     onUpdate(cb){
         this.callbacks.push(cb)
@@ -29,7 +29,11 @@ class Store {
         // update the game UI to reflect new game state
         this.update();
     }
-    resetGame(gameState){
+    resetGame(){
+        this.data = gameData();
+        this.update();
+    }
+    loadGame(gameState){
         this.data = gameState.data;
         this.data.messages.push({
             color: 'green',

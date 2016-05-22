@@ -1,4 +1,5 @@
 import React from 'react';
+import './title.css';
 
 export default React.createClass({
     _saveGame(){

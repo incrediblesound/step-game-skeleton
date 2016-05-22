@@ -5,8 +5,12 @@ export default function advancePlayerStats(gameData){
     // based on the number of resource producing facilities
     // and increases in population etc
     // this example adds up to three machines for each factory
+    // and checks the energy resource for the lose condition
     for(let i = 0; i < gameData.facilities.factories; i++){
         gameData.resources.machines += rnd(3);
+    }
+    if(gameData.resources.energy < 1){
+        gameData.mode = 'lost';
     }
 }
 
