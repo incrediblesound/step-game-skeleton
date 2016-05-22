@@ -5,4 +5,12 @@ The repo is configured to use react hot-loading and single store data flow which
 
 ##Development
 
-Clone the repo or fork and then clone. Run npm install to install all dependencies. Navigate to http://localhost:3000/dist/index.html to view the skeleton.
+Clone the repo or fork and then clone and then run npm install to install all dependencies.
+```shell
+$ npm install
+```
+Run the node server to start the webpack hot loading
+```shell
+$ node server
+```
+Navigate to http://localhost:3000/dist/index.html in your browser to view the skeleton
