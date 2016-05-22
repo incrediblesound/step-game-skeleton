@@ -19,4 +19,9 @@ Navigate to http://localhost:3000/dist/index.html in your browser to view the sk
 
 ##Source Code
 
-There are two core files that that you can start from to understand how this game framework works. The app is loaded from ./src/main.js and you will see that it loads the root UI component called Home. All the core UI components are loaded by Home. The store contains most of the game state data and the logic for evolving the game state from step to step. You can learn the application easily starting from these two points.
+There are two core files that that you can start from to understand how this game framework works: 
+```shell
+./src/main.js
+./src/data/Store.js
+```
+The app is loaded from main.js and you will see that it loads the root UI component called Home. All the core UI components are loaded by Home. The file Store.js contains most of the game state data and the logic for evolving the game state from step to step. You can learn the application easily starting from these two points.
